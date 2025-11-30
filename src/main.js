@@ -1,14 +1,14 @@
 import "./styles/normalize.scss";
 import "./styles/main.scss";
-import img1 from "./shared/assets/img/1.png";
-import img2 from "./shared/assets/img/2.png";
-import img3 from "./shared/assets/img/3.png";
-import img4 from "./shared/assets/img/4.png";
-import img5 from "./shared/assets/img/5.png";
-import img6 from "./shared/assets/img/6.png";
-import img7 from "./shared/assets/img/7.png";
-import img8 from "./shared/assets/img/8.png";
-import img9 from "./shared/assets/img/9.png";
+import img1 from "./shared/assets/img/1.webp";
+import img2 from "./shared/assets/img/2.webp";
+import img3 from "./shared/assets/img/3.webp";
+import img4 from "./shared/assets/img/4.webp";
+import img5 from "./shared/assets/img/5.webp";
+import img6 from "./shared/assets/img/6.webp";
+import img7 from "./shared/assets/img/7.webp";
+import img8 from "./shared/assets/img/8.webp";
+import img9 from "./shared/assets/img/9.webp";
 
 const coursesData = [
     {
@@ -233,7 +233,7 @@ function attachFilterListeners() {
             btn.classList.add("courses__filter_active");
 
             activeCategory = btn.dataset.category;
-            visibleCount = STEP;
+            visibleCount = 9;
             renderCourses();
         });
     });
