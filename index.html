@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <title>test-courses</title>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <div class="courses">
+                <div class="courses__header">
+                    <h6 class="courses__header-desc">Enjoy your studying!</h6>
+                    <h1 class="courses__header-title">Our online courses</h1>
+                </div>
+
+                <div class="courses__controls">
+                    <div class="courses__filters"></div>
+
+                    <input class="courses__input" type="text" placeholder="Search course..." />
+                </div>
+
+                <div class="courses__list"></div>
+                <div class="courses__more">
+                    <button class="courses__more-btn">
+                        <span class="courses__more-icon">
+                            <img src="./src/shared/assets/icons/more.svg" alt="Иконка" />
+                        </span>
+                        Load more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>

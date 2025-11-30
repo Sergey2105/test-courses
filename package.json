@@ -1,0 +1,18 @@
+{
+  "name": "test-courses",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "prettier": "3.7.2",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "sass": "^1.94.2"
+  }
+}

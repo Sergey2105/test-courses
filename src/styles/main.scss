@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    @media (max-width: 1230px) {
+        padding: 50px 16px 0 16px;
+    }
+}
+
+.controller {
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.courses {
+    &__header {
+        margin: 0 auto;
+        text-align: center;
+        &-desc {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        &-title {
+            font-weight: 900;
+            font-size: 46px;
+            line-height: 130%;
+            letter-spacing: 0;
+            margin: 0;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 85px;
+    }
+
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__filter {
+        display: flex;
+        gap: 4px;
+        cursor: pointer;
+        padding: 6px 16px;
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid transparent;
+        color: rgba(154, 156, 165, 1);
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0;
+        text-align: center;
+
+        &_active {
+            color: rgba(255, 63, 58, 1);
+            border: 1px solid rgba(255, 63, 58, 1);
+        }
+        &-count {
+            font-weight: 900;
+            font-size: 10px;
+            line-height: 150%;
+            letter-spacing: 0;
+            text-align: center;
+            color: inherit;
+        }
+    }
+
+    &__input {
+        width: 315px;
+
+        border: 1px solid rgba(215, 218, 221, 1);
+        border-radius: 4px;
+        height: 44px;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0;
+        color: rgba(154, 156, 165, 1);
+
+        padding: 0 50px 0 16px;
+        background-image: url("../shared/assets/icons/search.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 16px) center;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0;
+            color: rgba(154, 156, 165, 1);
+        }
+        &:focus {
+            outline: none;
+            border-color: rgba(154, 156, 165, 1);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+        gap: 30px;
+        padding-bottom: 80px;
+    }
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow:
+            0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+            0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+            0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+            0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 24px 24px 24px 24px;
+            border: 1px solid rgba(229, 232, 237, 1);
+            border-top: none;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            height: 100%;
+        }
+
+        &-category {
+            padding: 1px 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0;
+            color: rgba(255, 255, 255, 1);
+            width: fit-content;
+            border-radius: 4px;
+            &_design {
+                background-color: rgba(245, 47, 110, 1);
+            }
+            &_hr {
+                background-color: rgba(248, 152, 40, 1);
+            }
+            &_marketing {
+                background-color: rgba(3, 206, 164, 1);
+            }
+            &_management {
+                background-color: rgba(90, 135, 252, 1);
+            }
+            &_development {
+                background-color: rgba(119, 114, 241, 1);
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: 0;
+            color: rgba(30, 33, 44, 1);
+        }
+        &-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &-price {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0;
+            color: rgba(255, 66, 66, 1);
+        }
+        &-separator {
+            color: rgba(120, 122, 128, 1);
+        }
+        &-author {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0;
+            color: rgba(120, 122, 128, 1);
+        }
+    }
+
+    &__more {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 86px;
+        &-btn {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0;
+
+            background-color: transparent;
+            border: none;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__empty {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0;
+        color: rgba(120, 122, 128, 1);
+    }
+}
