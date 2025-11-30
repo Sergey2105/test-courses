@@ -21,7 +21,7 @@ const coursesData = [
     },
     {
         id: 2,
-        title: "Prduct Management Fundamentals",
+        title: "Product Management Fundamentals",
         category: "Management",
         price: 480,
         author: "Marvin McKinney",
@@ -29,7 +29,7 @@ const coursesData = [
     },
     {
         id: 3,
-        title: "HR  Management and Analytics",
+        title: "HR Management and Analytics",
         category: "HR & Recruting",
         price: 200,
         author: "Leslie Alexander Li",
@@ -151,7 +151,7 @@ function renderCourses() {
         }
 
         const card = `
-            <div class="courses__card">
+            <a href="/" class="courses__card">
                 <img class="courses__card-img" src="${course.image}" alt="${course.title}">
                 <div class="courses__card-info">
                     <div class="courses__card-category ${categoryClass}">${course.category}</div>
@@ -162,7 +162,7 @@ function renderCourses() {
                         <span class="courses__card-author">by ${course.author}</span>
                     </div>
                 </div>
-            </div>
+            </a>
         `;
         listEl.insertAdjacentHTML("beforeend", card);
     });
